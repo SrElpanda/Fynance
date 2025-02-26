@@ -1,0 +1,56 @@
+.main{
+    display: grid;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    background: #2C2C2C ;
+    height: 100vh
+}
+.back{
+    display: flex;
+    width: 100%;
+    
+}
+.side{
+    /* background: #808080 ; */
+    background: linear-gradient(to left, #726f6f , #404040);
+    width: 25%;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+label,.main h2,.main h3{
+    font-family: "Playfair Display", serif;
+    margin-top: 0px;
+    color: #FFFFFF ;
+    margin-bottom: 10px;
+    margin: auto;
+}
+.main h2{
+    font-style: italic;
+    font-size: 50px;
+}
+.main input,.main button, .main select{
+    background: #2C2C2C ;
+    border-color: #FFFFFF ;
+    color: #FFFFFF;
+    margin-top: 10px; 
+    height: 50px;
+    width: 300px;
+    margin: auto; 
+}
+
+#chat .main p{
+    border-color: #FFFFFF ;
+    color: #FFFFFF;
+}
+/* #130d08 */
+
+.inputs_calculadora{
+    width: 400px;
+}
+

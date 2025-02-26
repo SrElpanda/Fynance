@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Gradiente</title>
+    <!-- estilos propios -->
+    <link rel="stylesheet" href="css//own/own_styles.css">
+    <link rel="stylesheet" href="css//own/mainbody.css">
+    <!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Datetimepicker -->
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+    <!-- barra de navegación -->
+    <div class="js-sticky">
+        <div class="fh5co-main-nav">
+            <div class="container-fluid">
+                <div class="fh5co-menu-1">
+                    <!-- <a href="#" data-nav-section="acerca">Acerca de</a> -->
+                    <a href="CDT.html" >Simulador CDT</a>
+                </div>
+                <div class="fh5co-logo">
+                    <a href="index.html">Fynance</a>
+                </div>
+                <div class="fh5co-menu-2">
+                    <a href="chat.html" data-nav-section="menu">Chat</a>
+                    <div class="dropdown">
+                        <a href="#">Calculadora ▼</a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#">Valor Presente</a>
+                                <div class="sub-dropdown-content">
+                                    <a href="PF.html">Presente con Futuro</a>
+                                    <a href="PA.html">Presente con Anual</a>
+                                    <a href="PG.html">Presente con Gradiente</a>
+                                </div>
+                            </div>
+                            <div class="sub-dropdown">
+                                <a href="#">Valor Futuro</a>
+                                <div class="sub-dropdown-content">
+                                    <a href="FP.html">Futuro con Presente</a>
+                                    <a href="FA.html">Futuro con Anual</a>
+                                    <a href="FG.html">Futuro con Gradiente</a>
+                                </div>
+                            </div>
+                            <div class="sub-dropdown">
+                                <a href="#">Valor Anual</a>
+                                <div class="sub-dropdown-content">
+                                    <a href="AP.html">Anual con Presente</a>
+                                    <a href="AF.html">Anual con Futuro</a>
+                                </div>
+                            </div>
+                            <div class="sub-dropdown">
+                                <a href="#">Valor Grafiente</a>
+                                <div class="sub-dropdown-content">
+                                    <a href="GP.html">Gradiente con Presente</a>
+                                    <a href="GF.html">Gradiente con Futuro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="back">
+    <div class="side"></div>
+    <div class="main">
+            <h2>Calculadora valor Gradiente</h2>
+            <label>Valor Futuro:</label>
+            <input type="number" id="vf" step="0.01">
+            
+            <label>Tasa de Interés (en decimal, ej. 0.05 para 5%):</label>
+            <input type="number" id="i" step="0.01">
+            
+            <label>Tiempo (años):</label>
+            <input type="number" id="n"><br>
+            
+            <button onclick="calcular_GF()">Calcular</button>
+            
+            
+            <h3 id="resul_GF">Valor Gradiente</h3>
+        </div>
+        <div class="side"></div>
+    </div>
+    <!-- calculadora -->
+    <script src="js/functions/calculator.js"></script>
+    <!-- acciones -->
+    <script src="js/functions/actions.js"></script>
+    
+	<script>
+	$(function () {
+	$('#date').datetimepicker();
+	});
+	</script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+</body>
+</html>

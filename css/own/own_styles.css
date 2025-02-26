@@ -1,0 +1,79 @@
+/* Estilos del dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el dropdown al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Submenú */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* Lo coloca al lado derecho del menú padre */
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+/* Mostrar los dropdowns al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.tabla {
+    display: flex;
+    flex-direction: column;
+    width: 600px; /* Ajusta el ancho de la tabla */
+    margin: auto; /* Centra la tabla */
+    border: 2px solid white;
+}
+
+.fila {
+    display: flex;
+}
+
+.celda {
+    flex: 1; /* Hace que ambas celdas ocupen el mismo ancho */
+    padding: 1px;
+    border: 1px solid white;
+    font-size: 20px;
+    text-align: center;
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    height: 35px;
+}
+.celda h4{
+    color: white;
+}
