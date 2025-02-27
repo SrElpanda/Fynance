@@ -2,7 +2,7 @@ async function sendMessage() {
     let userMessage = document.getElementById("userMessage").value;
     document.getElementById("chat").innerHTML += `<p><strong>Tú:</strong> ${userMessage}</p>`;
 
-    let response = await fetch("https://srelpanda.github.io/Fynance/:5050/chat", {
+    let response = await fetch("/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage })
