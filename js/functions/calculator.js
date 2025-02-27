@@ -139,11 +139,41 @@ async function CDT() {
     } else {
         document.getElementById("resul_dav").innerText = `$${resul_dav.toFixed(2)}`;
     }
-    //banco 6
-    //banco 7
-    //banco 8
-    //banco 9
-    //banco 10
+    //Bancolombia
+    const resul_colombia = await colombia(n, vi);
+    if (isNaN(resul_colombia)) {
+        document.getElementById("resul_colombia").innerText = "--";
+    } else {
+        document.getElementById("resul_colombia").innerText = `$${resul_colombia.toFixed(2)}`;
+    }
+    //Falabella
+    const resul_fala = await fala(n, vi);
+    if (isNaN(resul_fala)) {
+        document.getElementById("resul_fala").innerText = "--";
+    } else {
+        document.getElementById("resul_fala").innerText = `$${resul_fala.toFixed(2)}`;
+    }
+    //BBVA
+    const resul_bbva = await bbva(n, vi);
+    if (isNaN(resul_bbva)) {
+        document.getElementById("resul_bbva").innerText = "--";
+    } else {
+        document.getElementById("resul_bbva").innerText = `$${resul_bbva.toFixed(2)}`;
+    }
+    //AV Villas
+    const resul_av = await av(n, vi);
+    if (isNaN(resul_av)) {
+        document.getElementById("resul_av").innerText = "--";
+    } else {
+        document.getElementById("resul_av").innerText = `$${resul_av.toFixed(2)}`;
+    }
+    //Caja Social
+    const resul_cs = await cs(n, vi);
+    if (isNaN(resul_cs)) {
+        document.getElementById("resul_cs").innerText = "--";
+    } else {
+        document.getElementById("resul_cs").innerText = `$${resul_cs.toFixed(2)}`;
+    }
 
 
 }
@@ -334,6 +364,213 @@ async function dav(n,vi) {
         case 2:
             if (vi>=500000){
                 i=0.0885;
+            }else{
+                return NaN;
+            }
+            break;
+        default:
+            return NaN;
+    }
+    return vi * Math.pow(1 + i, n);
+}
+//Bancolombia
+async function colombia(n,vi) {
+    let i;
+    switch (n) {
+        case 0.25:
+            if (vi>=1000000){
+                i=0.0725;
+            }else{
+                return NaN;
+            }
+            break;
+        case 0.5:
+            if (vi>=1000000){
+                i=0.079;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1:
+            if (vi>=1000000){
+                i=0.078;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1.5:
+            if (vi>=1000000){
+                i=0.0765;
+            }else{
+                return NaN;
+            }
+            break;
+        default:
+            return NaN;
+    }
+    return vi * Math.pow(1 + i, n);
+}
+
+//Falabella
+async function fala(n,vi) {
+    let i;
+    switch (n) {
+        case 0.25:
+            if (vi>=500000){
+                i=0.0883;
+            }else{
+                return NaN;
+            }
+            break;
+        case 0.5:
+            if (vi>=500000){
+                i=0.0888;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1:
+            if (vi>=500000){
+                i=0.0869;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1.5:
+            if (vi>=500000){
+                i=0.0814;
+            }else{
+                return NaN;
+            }
+            break;
+        case 2:
+            if (vi>=500000){
+                i=0.0805;
+            }else{
+                return NaN;
+            }
+            break;
+        default:
+            return NaN;
+    }
+    return vi * Math.pow(1 + i, n);
+}
+//BBVA
+async function bbva(n,vi) {
+    let i;
+    switch (n) {
+        case 0.25:
+            if (vi>=500000){
+                i=0.0872;
+            }else{
+                return NaN;
+            }
+            break;
+        case 0.5:
+            if (vi>=500000){
+                i=0.0887;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1:
+            if (vi>=500000){
+                i=0.0862;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1.5:
+            if (vi>=500000){
+                i=0.0833;
+            }else{
+                return NaN;
+            }
+            break;
+        case 2:
+            if (vi>=500000){
+                i=0.0787;
+            }else{
+                return NaN;
+            }
+            break;
+        default:
+            return NaN;
+    }
+    return vi * Math.pow(1 + i, n);
+}
+//AV Villas
+async function av(n,vi) {
+    let i;
+    switch (n) {
+        case 0.25:
+            if (vi>=500000){
+                i=0.083;
+            }else{
+                return NaN;
+            }
+            break;
+        case 0.5:
+            if (vi>=500000){
+                i=0.082;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1:
+            if (vi>=500000){
+                i=0.0765;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1.5:
+            if (vi>=500000){
+                i=0.077;
+            }else{
+                return NaN;
+            }
+            break;
+        case 2:
+            if (vi>=500000){
+                i=0.072;
+            }else{
+                return NaN;
+            }
+            break;
+        default:
+            return NaN;
+    }
+    return vi * Math.pow(1 + i, n);
+}
+//Caja Social
+async function cs(n,vi) {
+    let i;
+    switch (n) {
+        case 0.25:
+            if (vi>=500000){
+                i=0.081;
+            }else{
+                return NaN;
+            }
+            break;
+        case 0.5:
+            if (vi>=500000){
+                i=0.08;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1:
+            if (vi>=500000){
+                i=0.073;
+            }else{
+                return NaN;
+            }
+            break;
+        case 1.5:
+            if (vi>=500000){
+                i=0.0715;
             }else{
                 return NaN;
             }
